@@ -1,6 +1,13 @@
-FROM python:3.11
+FROM python
 
 WORKDIR /app
 
-COPY app.py
+COPY requirements.txt /app 
 
+RUN pip3 install -r requirements.txt
+
+COPY . /app 
+
+EXPOSE 8501
+
+CMD ["streamlit", "run", "app.py"]
