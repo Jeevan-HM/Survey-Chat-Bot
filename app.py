@@ -11,7 +11,7 @@ class SurveyBot:
     def __init__(self, objective):
         load_dotenv()
         self.configure_logging()
-        self.api_key = os.environ.get("OPENAI_API_KEY")
+        self.api_key = "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"
         self.assistant_id = os.environ.get("ASSISTANT_ID")
         self.client = OpenAI(api_key=self.api_key)
         self.objective = objective
