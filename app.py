@@ -127,6 +127,9 @@ async def main():
             key="submit_button",
             on_click=lambda: setattr(st.session_state, "submit_button_state", True),
         )
+        st.sidebar.write(
+            "Note: You can type exit any time during the conversation to exit the conversation."
+        )
 
     if st.session_state.submit_button_state:
         # Check if the bot has already been created
